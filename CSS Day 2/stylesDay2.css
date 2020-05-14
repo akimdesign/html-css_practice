@@ -17,13 +17,32 @@ html {
 
 .grey-box {
   background-color: #c9c4c4;
-  width: 80px;
-  height: 80px;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.grey-box:nth-child(1):hover {
+  background-color: darkcyan;
 }
 
 .grey-box:nth-child(2):hover {
-  background-color: red;
-  transition: 0.3s ease-in-out;
+  background-color: rgb(145, 45, 45);
+}
+
+.grey-box:nth-child(3):hover {
+  background-color: rgb(87, 16, 87);
+}
+
+.grey-box:hover {
+  transition: all 0.8s ease-out;
+  width: 8rem;
+  color: white;
 }
 
 body {
