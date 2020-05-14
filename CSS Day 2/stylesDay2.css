@@ -1,0 +1,33 @@
+body,
+html {
+  background-color: #348ffd;
+  padding: 0;
+  margin: 0;
+}
+
+.red-box {
+  width: 300px;
+  height: 300px;
+  background-color: #fa6b80;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.grey-box {
+  background-color: #c9c4c4;
+  width: 80px;
+  height: 80px;
+}
+
+.grey-box:nth-child(2):hover {
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
