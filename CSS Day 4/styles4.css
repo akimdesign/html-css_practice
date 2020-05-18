@@ -3,39 +3,56 @@ html {
   margin: 0;
   padding: 0;
   font-size: 10px;
+  font-family: sans-serif;
+  background-color: #76c4c6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .dots {
-  background-color: rgb(78, 156, 198);
-  height: 50vh;
+  width: 200px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  animation: dotAnimation 1s ease-in-out infinite;
+  margin-bottom: 200px;
 }
 
 .dot {
   background-color: white;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 2rem;
-  margin-left: 2rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  /* 👆🏻 If you set the border-radius to half of the width and height 
+  it becomes a circle, 50% also works*/
 }
 
-@keyframes rotate {
+@keyframes dotAnimation {
   0% {
+    transform: none;
   }
-}
-
-.dot:nth-child(1) {
-  animation: rotate 3s infinite linear;
+  50% {
+    transform: rotate(0.5turn);
+  }
+  /* 
+  👆🏻 Remove the 50% and see what happens, I put it there 
+  because I want to spend 50% of the animation time rotating,
+  and the other 50% on the same place, this slows the animation down.
+   */
+  100% {
+    transform: rotate(0.5turn);
+  }
 }
 
 /* Second task */
 
 .lines {
-  background-color: rgb(78, 156, 198);
-  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
